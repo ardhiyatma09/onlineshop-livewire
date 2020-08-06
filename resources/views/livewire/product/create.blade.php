@@ -43,7 +43,15 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label for="">Image</label>
-                                    <input type="file" class="form-control-file" id="image">
+                                    <input type="file" class="form-control-file" id="image" wire:model="image">
+                                    @error('description')
+                                        <span class="invalid-feedback">
+                                            <strong>{{$message}}</strong>
+                                        </span>
+                                    @enderror
+                                    @if ($image)
+                                        <img src="{{$image->temporaryUrl()}}" alt="" height="200">
+                                    @endif
                                 </div>
                             </div>
                         </div>
