@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Helpers\Cart;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class CartServiceProvider extends ServiceProvider
