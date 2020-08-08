@@ -17,7 +17,7 @@
                                     <td>{{$item->title}}</td>
                                     <td>Rp{{ number_format($item->price,2,",",".") }}</td>
                                     <td>
-                                        <button class="btn btn-sm btn-danger">
+                                        <button class="btn btn-sm btn-danger" wire:click="removeFromCart({{$item->id}})">
                                             Remove
                                         </button>
                                     </td>
